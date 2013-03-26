@@ -3,7 +3,7 @@ require 'fileutils'
 module Ace
   module Generators
     class InstallGenerator < ::Rails::Generators::Base
-      @@ace_version = "0.1.6"
+      @@ace_version = "1.0.0"
       @@ace_version_file = "ace-#{@@ace_version}.tgz"
       # @@ace_url = "https://github.com/downloads/ajaxorg/ace/#{@@ace_version_file}"
       @@ace_url = "http://cloud.github.com/downloads/ajaxorg/ace/#{@@ace_version_file}"
