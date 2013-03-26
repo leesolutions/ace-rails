@@ -9,7 +9,7 @@ module Ace
 
           mode_class = "#{mode}_mode".camelize
 
-          theme_script_tag = theme ? "<script type='text/javascript' src='/javascripts/ace/theme-#{theme}.js' charset='utf-8' ></script>" : ""
+          theme_script_tag = theme ? "<script type='text/javascript' src='/assets/javascripts/ace/theme-#{theme}.js' charset='utf-8' ></script>" : ""
           theme_setter = theme ? "editor.setTheme('ace/theme/#{theme}');" : ""
 
           output = <<HTML
@@ -17,8 +17,8 @@ module Ace
   <pre id='#{id}'>#{options[:content]}</pre>
   <div class='editor_footer'></div>
 </div>
-<script type='text/javascript' src='/javascripts/ace/ace.js' charset='utf-8' ></script>
-<script type='text/javascript' src='/javascripts/ace/mode-#{mode}.js' charset='utf-8' ></script>
+<script type='text/javascript' src='/assets/javascripts/ace/ace.js' charset='utf-8' ></script>
+<script type='text/javascript' src='/assets/javascripts/ace/mode-#{mode}.js' charset='utf-8' ></script>
 #{theme_script_tag}
 <script type='text/javascript'>
   window.onload = function() {
